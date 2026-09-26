@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Meu Grande Amor ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <!-- Chuva de Corações Pastéis -->
+    <div id="hearts-container"></div>
+
+    <!-- Controle de Música -->
+    <div class="music-control">
+        <button id="musicBtn" onclick="toggleMusic()">🎵 Tocar Música Romântica</button>
+    </div>
+
+    <!-- Cabeçalho Principal -->
+    <header class="hero">
+        <div class="teddy-bear left">🧸</div>
+        <div class="hero-content">
+            <h1>Para o Amor da Minha Vida 💕</h1>
+            <p>Fiz este cantinho especial só para te mostrar o quanto você é importante para mim...</p>
+            <button class="btn-love" onclick="mostrarSurpresa()">Clique aqui para uma surpresa! 💌</button>
+            <div id="surpresa-box" class="hidden">
+                <p>✨ Você é a minha pessoa favorita em todo o universo! ✨</p>
+            </div>
+        </div>
+        <div class="teddy-bear right">🧸</div>
+    </header>
+
+    <!-- Galeria dos Nossos Pets -->
+    <section class="section pets-section">
+        <h2>Nossa Família de Patinhas 🐾</h2>
+        <p class="subtitle">Os nossos companheiros mais fofos do mundo!</p>
+        
+        <div class="pets-grid">
+            <!-- Gato Frajola -->
+            <div class="pet-card">
+                <div class="pet-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400" alt="Gato Frajola">
+                </div>
+                <h3>Nosso Frajola 🐈‍⬛</h3>
+                <p>O gato macho mais charmoso, elegante e companheiro do nosso lar!</p>
+            </div>
+
+            <!-- Gatas Siamesas -->
+            <div class="pet-card">
+                <div class="pet-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?w=400" alt="Gatas Siamesas">
+                </div>
+                <h3>Nossas Duas Siamesas 🐱🐱</h3>
+                <p>Duas princesinhas de olhos lindos que trazem tanto carinho pra gente!</p>
+            </div>
+
+            <!-- Cachorra Preta Filhote -->
+            <div class="pet-card">
+                <div class="pet-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400" alt="Filhote de Cachorra Preta">
+                </div>
+                <h3>Nossa Filhotinha Preta 🐶</h3>
+                <p>A mais fofinha, brincalhona e cheia de energia que enche o coração de alegria!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Imagens Reais Fofas -->
+    <section class="section love-gallery">
+        <h2>Amor em Cada Detalhe ✨</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400" alt="Gatinhos se abraçando">
+                <p>Assim como dois gatinhos juntinhos, quero estar sempre ao seu lado!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400" alt="Mãos dadas">
+                <p>Segurar a sua mão é a melhor sensação do mundo.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400" alt="Momento Romântico">
+                <p>Cada segundo com você se torna uma lembrança inesquecível.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Joguinho do Amor: Jogo da Velha -->
+    <section class="section game-section">
+        <h2>Jogo da Velha do Amor 🎮❤️</h2>
+        <p>Jogue um pouquinho comigo! Quem ganha ganha um beijinho extra!</p>
+        
+        <div class="game-board" id="board">
+            <div class="cell" onclick="makeMove(this, 0)"></div>
+            <div class="cell" onclick="makeMove(this, 1)"></div>
+            <div class="cell" onclick="makeMove(this, 2)"></div>
+            <div class="cell" onclick="makeMove(this, 3)"></div>
+            <div class="cell" onclick="makeMove(this, 4)"></div>
+            <div class="cell" onclick="makeMove(this, 5)"></div>
+            <div class="cell" onclick="makeMove(this, 6)"></div>
+            <div class="cell" onclick="makeMove(this, 7)"></div>
+            <div class="cell" onclick="makeMove(this, 8)"></div>
+        </div>
+        <p id="gameStatus">Sua vez: ❤️ (Amor)</p>
+        <button class="btn-reset" onclick="resetGame()">Reiniciar Jogo 🔄</button>
+    </section>
+
+    <!-- Botões Interativos -->
+    <section class="section interactive-buttons">
+        <h2>Clique para Receber Carinho 💖</h2>
+        <div class="buttons-grid">
+            <button onclick="fazerElogio()">Gerar um Elogio 🥰</button>
+            <button onclick="mimar()">Receber um Beijinho 💋</button>
+            <button onclick="promessa()">Uma Promessa Minha 💍</button>
+        </div>
+        <div id="mensagem-interativa" class="message-box"></div>
+    </section>
+
+    <!-- Final da Página (Ao Rolar Tudo) -->
+    <footer class="footer-love">
+        <div class="big-love-container">
+            <h1 class="big-love">EU TE AMO! ❤️</h1>
+            <p>Mais do que todas as estrelas do céu e do que todas as palavras podem dizer!</p>
+            <p class="signature">Para sempre sua/seu 🥰</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
